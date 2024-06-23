@@ -1,0 +1,327 @@
+@keyframes hover-animation {
+    0% {
+      color: #000000;
+    }
+    100% {
+      color: #ff0000;
+    }
+  }
+  :root {
+    /* Light theme colors */
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --post-color-light: #f1f1f1;
+    --post-border-color-light: #dddcdc;
+    --post-container-color-light: #eceaea;
+    --post-container-border-color-light: #dfdada;
+    --likes-container-border-light: #dbdbdb;
+    --likes-container-color-light: #f1f1f1;
+    --user-color-light: #666666;
+    --svg-color-light: #666666;
+  
+    /* Dark theme colors */
+    --background-color-dark: rgb(44, 44, 49);
+    --text-color-dark: #fdfdfd; 
+    --post-color-dark: rgb(122, 122, 122);
+    --post-border-color-dark: #797979;
+    --post-container-color-dark: rgb(85, 85, 85);
+    --post-container-border-color-dark: rgb(107, 107, 107);
+    --likes-container-border-dark: #707070;
+    --likes-container-color-dark: rgb(151, 151, 151);
+    --user-color-dark: #dbdadb;
+    --svg-color-dark: #f7f6f6;
+  }
+
+  .dark {
+    --background-color-light: var(--background-color-dark);
+    --text-color-light: var(--text-color-dark);
+    --border-color-light: var(--border-color-dark);
+    --post-color-light: var(--post-color-dark);
+    --post-border-color-light: var(--post-border-color-dark);
+    --post-container-color-light: var(--post-container-color-dark);
+    --post-container-border-color-light: var(--post-container-border-color-dark);
+    --likes-container-border-light: var(--likes-container-border-dark);
+    --likes-container-color-light: var(--likes-container-color-dark);
+    --user-color-light: var(--user-color-dark);
+    --svg-color-light: var(--svg-color-dark);
+  }
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color-light);
+    transition: background-color 1s ease-in-out;
+}
+
+.post{
+    margin: 5px 19px;
+    padding: 0px 20px;
+    width: 700px;
+    height: auto;
+    overflow-x: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--post-border-color-light);
+    background-color: var(--post-color-light);
+    transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out, background-color 1s ease-in-out;
+}
+
+.post-container{
+        margin: 10px 30px;
+        overflow-x: hidden;
+        border-radius: 15px;
+        border: 1px solid var(--post-container-border-color-light);
+        background-color: var(--post-container-color-light);
+        transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out, background-color 1s ease-in-out;
+}
+.post-title{
+    transition: transform 0.3s ease-in-out;
+    font-size: 22px;
+    font-weight: 550;
+    color: var(--text-color-light);
+}
+.post a{
+  text-decoration: none;
+}
+
+
+
+.content{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: var(--text-color-light);
+}
+
+.post-options{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.post-options svg{
+  color: var(--svg-color-light);
+}
+
+.likes{
+    padding: 10px 5px 10px 15px;
+}
+
+.likes-container{
+    border: 1px solid var(--likes-container-border-light);
+    background-color: var(--likes-container-color-light);
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.user{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    color: var(--text-color-light);
+}
+.user h5{
+    margin:0 0 0 5px;
+}
+
+.post:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+.user:hover{
+    transform: translateX(20px);
+    color: var(--user-color-light);
+}
+.post-title:hover{
+    transform: translateX(10px);
+}
+
+
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 30px 30px 30%;
+  }
+
+  .skeleton .skeleton-circular {
+    width: 30px;
+    height: 30px;
+  } 
+
+  .skeleton .skeleton-text {
+    width: 700px; 
+    height: 40px;
+  }
+
+  .skeleton .skeleton-rectangular {
+    width: 700px; 
+    height: 100px;
+  }
+  
+  .loading{
+    margin: 20%;
+    height: 100vh;
+  }
+
+@media (max-width: 1024px){
+    .skeleton {
+        margin: 30px 11%;
+      }
+    
+    
+      .skeleton .skeleton-circular {
+        width: 30px;
+        height: 30px;
+      } 
+    
+      .skeleton .skeleton-text {
+        width: 700px; 
+        height: 40px;
+      }
+    
+      .skeleton .skeleton-rectangular {
+        width: 700px; 
+        height: 100px;
+      }
+}
+
+@media (max-width: 768px){
+    .fetch{
+        width: 100%;
+    }
+    .post{
+        margin: 10px 18px 0 18px;
+        padding: 0px 20px;
+        width: 84%;
+    }
+    
+    .post-container{
+            margin: 10px 4% 10px 4%;
+            padding: 0;
+            width: 92%;
+    }
+    .post-title{
+        font-size: 18px;
+    }
+    
+    .skeleton {
+        margin: 30px 10%;
+      }
+
+    
+      .skeleton .skeleton-circular {
+        width: 30px;
+        height: 30px;
+      } 
+    
+      .skeleton .skeleton-text {
+        width: 600px; 
+        height: 40px;
+      }
+    
+      .skeleton .skeleton-rectangular {
+        width: 600px; 
+        height: 100px;
+      }
+    
+    
+    .content{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .post-options{
+        margin-top: 0px;
+    }
+    .loading{
+      margin: 50% 10%;
+    }
+    
+}
+
+@media (max-width: 430px) {
+    .fetch{
+        width: 100%;
+    }
+    .post{
+        margin: 7px 15px 0 15px;
+        padding: 0px 20px;
+        width: 82%;
+    }
+    
+    .post-container{
+            margin: 10px 4% 10px 4%;
+            padding: 0;
+            width: 92%;
+    }
+    .post-title{
+        font-size: 17px;
+    }
+    
+    .skeleton{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    }
+    
+    
+    .content{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .post-options{
+        margin-top: 0px;
+    }
+    
+    .likes{
+        padding: 10px 5px 10px 15px;
+    }
+    
+    .likes-container{
+        border-radius: 30px;
+        margin: 5px;
+    }
+    
+    .user{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .user h5{
+        margin:0 0 0 5px;
+    }
+    .user svg{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .skeleton .skeleton-circular {
+        width: 30px;
+        height: 30px;
+      }
+    
+      .skeleton .skeleton-text {
+        width: 100%; 
+        height: 40px;
+      }
+    
+      .skeleton .skeleton-rectangular {
+        width: 100%; 
+        height: 100px;
+      }
+
+      .loading{
+        margin: 90% 10%;
+      }
+}

@@ -1,0 +1,120 @@
+:root {
+    /* Light theme colors */
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --likes-container-border-light: #dbdbdb;
+    --likes-container-color-light: #f1f1f1;
+    --user-color-light: #666666;
+    --svg-color-light: #666666;
+  
+    /* Dark theme colors */
+    --background-color-dark: rgb(44, 44, 49);
+    --text-color-dark: #fdfdfd; 
+    --likes-container-border-dark: #707070;
+    --likes-container-color-dark: rgb(151, 151, 151);
+    --user-color-dark: #dbdadb;
+    --svg-color-dark: #f7f6f6;
+  }
+
+  .dark {
+    --background-color-light: var(--background-color-dark);
+    --text-color-light: var(--text-color-dark);
+    --border-color-light: var(--border-color-dark);
+    --likes-container-border-light: var(--likes-container-border-dark);
+    --likes-container-color-light: var(--likes-container-color-dark);
+    --user-color-light: var(--user-color-dark);
+    --svg-color-light: var(--svg-color-dark);
+  }
+
+  .comment-frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+}
+
+.comment-body{
+    font-size: 15px;
+    padding-left: 5%;
+    color: var(--text-color-light);
+    transition: color 1s ease-in-out;
+}
+
+.comment-options{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.comment-reach{
+    padding: 10px 5px 10px 5%;
+}
+
+.comment-reach-container{
+    border: 1px solid var(--likes-container-border-light);
+    background-color: var(--likes-container-color-light);
+    border-radius: 30px;
+    margin: 5px 5px 5px 0px;
+    transition: background-color 1s ease-in-out;
+}
+
+.comment-options svg{
+    color: var(--svg-color-light);
+    transition: color 1s ease-in-out;
+  }
+ h4{
+    color: var(--text-color-light);
+    transition: color 1s ease-in-out;
+  }
+
+  .comment-name{
+    margin: 0;
+  }
+
+  .comment-email{
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .add-comment{
+    width: 700px;
+  }
+  .comment-error{
+    color: #d32f2f; 
+    font-size: 12px;
+  }
+
+  .add-comment .quill{
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 1s ease-in-out;
+}
+
+.submit-icons svg{
+    color: var(--svg-color-light);
+    transition: color 1s ease-in-out;
+}
+
+@media (max-width: 768px){
+    .comment-frame{
+        width: 95%;
+        margin: 0 auto ;
+    }
+    .add-comment{
+        width: 500px;
+    }
+    h4{
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 430px){
+    .comment-frame{
+        width: 95%;
+    }
+    .add-comment{
+        width: 340px;
+    }
+    h4{
+        margin-left: 5%;
+    }
+}

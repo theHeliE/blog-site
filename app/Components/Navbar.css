@@ -1,0 +1,178 @@
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .navbar {
+    width: 100%;
+    background: linear-gradient(60deg, #6d5fbb, #a1499d, #963d3d);
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.navbar-container { 
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-right: 30px;
+    margin-left: 1%;
+    display: flex;
+  }
+  .create{
+    display: flex;
+    align-items: center;
+  }
+  .create svg{
+    margin-right: 5px;
+  }
+  .title {
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Tungsten';
+    font-weight: 900;
+    font-style: normal;
+    background: linear-gradient(90deg, #d8d8d8, #000000);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 12s ease infinite;
+}
+
+@keyframes hover-gradient {
+  0% {
+    background: #000000;
+    color: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: #f8e914;
+    color: #f8e914;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.title:hover {
+  position: relative;
+  background: #000000;
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hover-gradient 0.4s ease-in-out forwards;
+}
+  
+
+.options{
+    margin-right: 30px;
+}
+.options h2{
+  font-family: 'Tungsten';
+    font-weight: 700;
+    font-style: normal;
+}
+
+.options:hover {
+  position: relative;
+  background: #000000;
+  background-size: 800% 800%;
+  -webkit-background-clip: text ;
+  -webkit-text-fill-color: transparent;
+  animation: hover-gradient 0.2s ease-out forwards;
+}
+
+@media (max-width: 1024px){
+    .navbar-container{
+        width: 100%;
+    }
+    .navbar{
+        height: 70%;
+    }
+    .options{
+        font-size: 11px;
+        font-weight: 400;
+        margin-right: 30px;
+    }
+    .logo{
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+}
+
+@media (max-width: 767px){
+    .navbar-container{
+        width: 100%;
+    }
+    .navbar{
+        height: 70%;
+    }
+    .options{
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 15px;
+    }
+    .logo{
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+}
+
+@media (max-width: 430px) {
+    .navbar-container{
+        width: 98%;
+        position: relative;
+        left: 2%;
+    }
+    .navbar{
+      width: 100%;
+        height: 70%;
+    }
+    .options{
+        font-size: 11px;
+        font-weight: 400;
+        margin-right: 5%;
+    }
+    .logo{
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .title{
+      font-size: 200%;
+    }
+    
+}
+
+@media (max-width: 375px) {
+  .navbar-container{
+      width: 98%;
+      position: relative;
+      left: 2%;
+  }
+  .navbar{
+    width: 100%;
+      height: 70%;
+  }
+  .options{
+      font-size: 11px;
+      font-weight: 400;
+      margin-right: 5%;
+  }
+  .logo{
+      margin-right: 5%;
+      margin-left: 5%;
+  }
+  .title{
+    font-size: 150%;
+  }
+}
